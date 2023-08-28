@@ -655,6 +655,12 @@ body {
 .contact-list {
     margin-bottom: 3rem;
 }
+.contact-list li{
+    color: rgb(13, 222, 6);
+}
+.contact-list li:hover{
+    color: rgb(249, 16, 16);
+}
 
 .contact-list li {
     margin-bottom: 10px;
