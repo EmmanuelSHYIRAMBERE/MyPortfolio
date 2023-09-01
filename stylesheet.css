@@ -591,6 +591,12 @@ body {
 
 }
 
+.portoflio .todo {
+    align-items: right;
+    padding: 10%;
+    color: yellowgreen;
+}
+
 .main-text {
     align-items: center;
 }
