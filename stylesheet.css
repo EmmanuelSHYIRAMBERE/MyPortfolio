@@ -7,8 +7,8 @@
 }
 
 body {
-    color: #ededed;
-    background: #2f2c31;
+    color: #fff;
+    background-color: #2f2c31;
 }
 
 .header {
@@ -103,6 +103,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     opacity: o;
+    color: #fff;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
 }
@@ -121,7 +122,7 @@ body {
 .home-content h1 {
     font-size: 35px;
     font-weight: 700;
-    color: rgb(251, 247, 251);
+    color: #EC6DE7;
     margin: -3px 0;
     opacity: o;
     animation: slideRight 1s ease forwards;
@@ -134,6 +135,7 @@ body {
     opacity: o;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
+    color: #fff;
 }
 
 .home-scl a {
@@ -215,6 +217,7 @@ body {
 
 .about-text h2 {
     font-size: 60px;
+    color: #000;
 }
 
 .about-text h2 span {
@@ -427,19 +430,47 @@ body {
 }
 
 .progress-line.html span::after {
-    content: 74%;
+    content: '74%';
+    background: transparent;
+    position: absolute;
+    top: -30px;
+    left: 95%;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
 }
 
 .progress-line.css span::after {
-    content: 54%;
+    content: "54%";
+    background: transparent;
+    position: absolute;
+    top: -30px;
+    left: 95%;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
 }
-
+  
 .progress-line.javascript span::after {
-    content: 38%;
+    content: '38%';
+    background: transparent;
+    position: absolute;
+    top: -30px;
+    left: 95%;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
 }
 
 .progress-line.powerpoint span::after {
-    content: 81%;
+    content: '81%';
+    background: transparent;
+    position: absolute;
+    top: -30px;
+    left: 95%;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
 }
 
 .progress-line span::before {
@@ -583,26 +614,18 @@ body {
     opacity: 0;
 }
 
-.portoflio {
-    padding-top: 10rem;
-    padding-bottom: 2rem;
-    padding-left: 20%;
-    padding-right: 20%;
 
-}
+.portfolio-content {
+    padding: 8%;
 
-.portoflio .todo {
-    align-items: right;
-    padding: 10%;
-    color: yellowgreen;
 }
 
 .main-text {
-    align-items: center;
+    padding-top: 130px;
+    margin-top: 200px;
 }
 
 .main-text h2 {
-    padding-bottom: 5rem;
     font-size: 60px;
     line-height: 1;
     text-align: center;
@@ -612,9 +635,79 @@ body {
     color: #0ef;
 }
 
-.main-text .bar i {
-    font-size: 60px;
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    gap: 1rem;
+
 }
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.layer i {
+    columns: #ff004f;
+    margin-top: 20px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    font-size: 280%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.row:hover img {
+    transform: scale(1.1);
+}
+
+.row:hover .layer {
+    height: 100%;
+}
+
 
 
 
@@ -624,7 +717,7 @@ body {
 }
 
 .contact-content {
-    width: 100%;
+    width: 50%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -648,24 +741,20 @@ body {
     margin: 15px 0;
     color: #ededed;
     font-size: 40px;
+    color: purple;
     font-weight: 600;
 }
 
 .contact-text p {
     color: #ededed;
     font-size: 20px;
+    width: 40rem;
     line-height: 30px;
     margin-bottom: 2rem;
 }
 
 .contact-list {
     margin-bottom: 3rem;
-}
-.contact-list li{
-    color: rgb(13, 222, 6);
-}
-.contact-list li:hover{
-    color: rgb(249, 16, 16);
 }
 
 .contact-list li {
@@ -684,6 +773,14 @@ body {
 .contact-list i li a:hover {
     transform: scale(1.01) translateY(-5px);
     color: #0ef;
+}
+
+.contact-list li {
+    color: rgb(13, 222, 6);
+}
+
+.contact-list li:hover {
+    color: rgb(249, 16, 16);
 }
 
 .contact-icons i {
@@ -713,11 +810,16 @@ body {
 
 .contact-form form {
     position: flex;
+    width: 170%;
+    padding-left: 10%;
     padding-top: 90%;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-.contact-form form input,
-form textarea {
+.contact-form form .input1,
+form .textarea {
     border: none;
     outline: none;
     padding: 18px;
@@ -728,30 +830,46 @@ form textarea {
     margin-bottom: 0.5rem;
     border-radius: 0.5rem;
 }
-
-.contact-form textarea {
-    resize: none;
-    height: 220px;
+.contact-form form .contact-form-input input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
 }
 
-.contact-form form .send {
+.contact-form .textarea {
+    resize: none;
+    height: 200px;
+    width: 100%;
+}
+
+.contact-form form button {
     display: inline-block;
-    padding: 14px 60px;
+    padding: 20px 60px;
     background: #fff;
     border-radius: 40px;
-    font-size: 1px;
-    color: black;
+    font-size: 20px;
+    width: 170%;
+    color: #000;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
-    opacity: o;
+    opacity: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
     box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
 }
 
-.contact-form form .send:hover {
+.contact-form form button:hover {
     box-shadow: 0 0 5px, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan;
+}
+
+.contact-form form button:active {
+    background: violet;
+    box-shadow: 0 0 5px #EC6DE7, 0 0 25px #EC6DE7, 0 0 50px #EC6DE7, 0 0 100px #EC6DE7;
 }
 
 
