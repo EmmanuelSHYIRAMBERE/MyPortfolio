@@ -5,32 +5,26 @@ var typed = new Typed(".text", {
     backDelay: 1000,
     loop: true
 });
-function sendMail() {
-    var params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value,
-    };
-
-    const serviceID = "service_lpu5bn4";
-    const templateID = "template_xnbv98k";
-
-    emailjs
-        .send(serviceID, templateID, params)
-        .then(res => {
-                document.getElementById("name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("subject").value = "";
-                document.getElementById("message").value = "";
-                console.log(res);
-                alert("your message sent successfully");
-            })
-
-            .catch((err) => console.log(err));
-
-}
 
 
+const btn = document.getElementById('button');
 
-    
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_feidnor';
+   const templateID = 'template_mcl8zir';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent! Thank you for feedback.');
+      this.reset();
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
